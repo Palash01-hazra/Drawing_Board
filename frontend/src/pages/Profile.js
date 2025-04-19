@@ -16,7 +16,7 @@ function Profile() {
       return;
     }
  try{
-    const response=await fetch('http://localhost:3030/users/profile', {
+    const response=await fetch('https://drawing-board-1.onrender.com/users/profile', {
       method: 'GET',
       headers: {
         'Authorization': `Bearer ${token}`

@@ -15,7 +15,7 @@ function Login() {
     setError('');
 
     try {
-      const res = await fetch('http://localhost:3030/users/login', {
+      const res = await fetch('https://drawing-board-1.onrender.com/users/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: formData.email, password: formData.password }),
