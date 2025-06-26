@@ -27,7 +27,7 @@ const Sidebar = () => {
 
   const fetchCanvases = async () => {
     try {
-      const response = await axios.get('https://drawing-board-1.onrender.com/api/canvas/list', {
+      const response = await axios.get('https://drawing-board-3.onrender.com/api/canvas/list', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setCanvases(response.data);
@@ -52,7 +52,7 @@ const Sidebar = () => {
 
   const handleCreateCanvas = async () => {
     try {
-      const response = await axios.post('https://drawing-board-1.onrender.com/api/canvas/create', {}, {
+      const response = await axios.post('https://drawing-board-3.onrender.com/api/canvas/create', {}, {
         headers: { Authorization: `Bearer ${token}` }
       });
       console.log(response.data)  
@@ -67,7 +67,7 @@ const Sidebar = () => {
 
   const handleDeleteCanvas = async (id) => {
     try {
-      await axios.delete(`https://drawing-board-1.onrender.com/api/canvas/delete/${id}`, {
+      await axios.delete(`https://drawing-board-3.onrender.com/api/canvas/delete/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       fetchCanvases();
@@ -104,7 +104,7 @@ const Sidebar = () => {
       setSuccess(""); // Clear previous success message
 
       const response = await axios.put(
-        `https://drawing-board-1.onrender.com/api/canvas/share/${canvasId}`,
+        `https://drawing-board-3.onrender.com/api/canvas/share/${canvasId}`,
         { email },
         {
           headers: { Authorization: `Bearer ${token}` },
